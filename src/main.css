@@ -1,0 +1,84 @@
+body{
+  font-family: "Open Sans", sans-serif;
+    overflow-y: scroll;
+    /* color: rgb(255, 255, 255); */
+    background-color: rgb(0, 0, 0);
+    padding-bottom: 2rem
+}
+.App {
+  text-align: center;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin:0  6rem 6rem 6rem;
+}
+
+.movie-card {
+  background-color:transparent;
+  color: white;
+  
+  
+  width: 330px;
+  height: 348px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.movie-card-content h3{
+  font-family: "Star Jedi", "Open Sans", sans-serif;
+  font-size: 2.2rem;
+
+
+}
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: transparent 0px 0px 10px 3px, rgb(123, 197, 226) 0px 0px 10px;
+}
+
+.movie-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.movie-card:hover::before {
+  opacity: 0.7;
+}
+
+.movie-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.more-info {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+.logo path {
+  fill: yellow;
+}
+.logo{
+  width: 450px;
+  height: 75.92px;
+  
+}
+.svg-div{
+  display: grid;
+  justify-content: center;
+  padding: 20px;
+}
