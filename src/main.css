@@ -82,3 +82,7 @@ body{
   justify-content: center;
   padding: 20px;
 }
+.notify{
+  color: white;
+  text-align: center;
+}
