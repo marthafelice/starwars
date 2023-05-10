@@ -108,7 +108,10 @@ body{
   padding-top:5px ;
   padding-bottom: 5px;
 }
-
+.list_grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 .header{
   display: grid;
   justify-content: center;

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import DetailsSection from '../components/DetailsSection';
 function Film(props) {
     const { film } = props;
     
@@ -11,30 +12,35 @@ function Film(props) {
         <div><p>Director: {film.director}</p></div>
         <div><p>Producer: {film.producer}</p></div>
         </div>
-
-        <div className='fields'>
+<DetailsSection title={'Description'} description={film.opening_crawl}/>
+        {/* <div className='fields'>
           <h3>Description:</h3>
           <p>{film.opening_crawl}</p>
-        </div>
+        </div> */}
+<DetailsSection title={'Characters'} list={film.characters}/>
+<DetailsSection title={'Planets'} list={film.planets}/>
+<DetailsSection title={'Species'} list={film.species}/>
+<DetailsSection title={'Starships'} list={film.starships}/>
+<DetailsSection title={'Vehicles'} list={film.vehicles}/>
 
-        <div className='fields'>
+        {/* <div className='fields'>
           <h3>Characters:</h3>
           <ul>
         {film.characters.map((character, index) => (
-          <li key={index}>{character}</li>
+          <li key={index}>{character.name}</li>
         ))}
       </ul>
-        </div>
+        </div> */}
 
-        <div className='fields'>
+        {/* <div className='fields'>
           <h3>Planets:</h3>
           <ul>
             <li>{film.planets}</li>
             </ul>
           
-        </div>
+        </div> */}
 
-        <div className='fields'>
+        {/* <div className='fields'>
           <h3>Species:</h3>
           <ul>
             <li>{film.species}</li>
@@ -44,7 +50,7 @@ function Film(props) {
         <div className='fields'>
           <h3>Starships:</h3>
           <ul>
-            <li>{film.planets}</li>
+            <li>{film.starships}</li>
             </ul>
         </div>
 
@@ -53,7 +59,7 @@ function Film(props) {
           <ul>
             <li>{film.vehicles}</li>
             </ul>
-        </div>
+        </div> */}
   
       </div>
 
